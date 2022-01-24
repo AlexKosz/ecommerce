@@ -1,0 +1,25 @@
+version: "3.2"
+services:
+  web:
+    build: .
+    command: python ./server/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  client:
+    restart: always
+    command : npm start
+    container_name: front
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    
+
