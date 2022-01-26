@@ -3,6 +3,7 @@
 src/site/_data/resource*.json
 
 db.*
+.devcont*
 
 # Logs
 logs
