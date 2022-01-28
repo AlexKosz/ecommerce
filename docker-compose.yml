@@ -14,12 +14,8 @@ services:
 
   client:
     restart: always
-    command : npm start
+    command: npm start
     container_name: front
-    build:
-      context: ./client/
-      dockerfile: Dockerfile
+    build: .
     ports:
       - "3000:3000"
-    
-
