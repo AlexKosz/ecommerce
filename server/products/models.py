@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    desc = models.TextField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
     qty_avail = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(1000)])
 
