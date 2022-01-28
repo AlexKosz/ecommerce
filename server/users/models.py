@@ -10,4 +10,4 @@ class Cart(models.Model):
         User, on_delete=models.CASCADE, null=True, blank=True)
 
     product = models.ManyToManyField(
-        Product, null=True, blank=True, on_delete=models.CASCADE)
+        Product, blank=True)

@@ -24,7 +24,7 @@ class Product(models.Model):
 
     tags = models.ManyToManyField('Tag', blank=True)
     related_products = models.ManyToManyField(
-        'self', symmetrical=False, null=True, blank=True)
+        'self', symmetrical=False, blank=True)
     # many-many orders in order model
     # one to many in review model
 
