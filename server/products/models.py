@@ -9,7 +9,7 @@ class Product(models.Model):
     qty_avail = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(1000)])
 
-    # image = models.ImageField(null=True, blank=True, default="default.jpg")
+    image = models.ImageField(null=True, blank=True, default="default.jpg")
     # Not used in this project - warehouse_location = models.CharField(max_length=200, null=True, blank=True)
 
     # $0.01 - $1000.00

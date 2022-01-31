@@ -22,5 +22,15 @@ def createAccount(sender, instance, created, **kwargs):
 
         )
 
+        # send_mail(
+        #     'sub',
+        #     'mess',
+        #     'testemails105@gmail.com',
+        #     'zanzong43@gmail.com',
+        #     fail_silently=False
+
+        # )
+
 
 post_save.connect(createAccount, sender=User)
+
