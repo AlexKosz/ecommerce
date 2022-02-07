@@ -4,20 +4,23 @@ import ProductCard from './ProductCard';
 
 
 
+const baseURL = 'http://localhost:8000'
+const apiURL = `${baseURL}/api`
+
+
+
+
 
 
 const Store = () => {
     const [products, setProducts] = useState([])
 
-    const baseURL = 'http://localhost:8000/api/'
-
     const getProducts = () => {
-        axios.get(`${baseURL}products/`).then(res => {
+        axios.get(`${apiURL}/products/`).then(res => {
             setProducts(res.data)
             console.log(res.data);
         })
     }
-
 
     useEffect(() => {
         getProducts()
@@ -32,7 +35,7 @@ const Store = () => {
             {
                 products.map(
                     (product, index) =>
-                        <ProductCard product={product} />
+                        <ProductCard product={product} url={baseURL} />
                 )
             }
         </div>

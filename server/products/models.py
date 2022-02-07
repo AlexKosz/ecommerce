@@ -40,6 +40,14 @@ class Review(models.Model):
     class Meta:
         unique_together = [['owner', 'product']]
 
+    def __str__(self):
+        return self.rating
+
+
 
 class Tag(models.Model):
     name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
