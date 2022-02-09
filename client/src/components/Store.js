@@ -8,10 +8,6 @@ const baseURL = 'http://localhost:8000'
 const apiURL = `${baseURL}/api`
 
 
-
-
-
-
 const Store = () => {
     const [products, setProducts] = useState([])
 
@@ -30,14 +26,16 @@ const Store = () => {
 
 
     return (
-        <div>
+        <div className='mainStore'>
             <h1>Store Page</h1>
-            {
-                products.map(
-                    (product, index) =>
-                        <ProductCard product={product} url={baseURL} />
-                )
-            }
+            <div className='productsWrapper'>
+                {
+                    products.map(
+                        (product, index) =>
+                            <ProductCard product={product} url={baseURL} />
+                    )
+                }
+            </div>
         </div>
     );
 }

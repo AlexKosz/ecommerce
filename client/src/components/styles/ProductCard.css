@@ -1,9 +1,10 @@
 .productCard{
     border: 3px solid #aaa;
     border-radius: 5px;
-    min-width: 200px;
-    max-width: 20em;
+    min-width: 20em;
+    max-width: 40em;
     padding: 1em;
+    margin: 1em;
 }
 
 .productCard:hover{
