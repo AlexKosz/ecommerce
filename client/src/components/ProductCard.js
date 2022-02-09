@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './styles/ProductCard.css';
 
 const ProductCard = (props) => {
     const url = props.url
@@ -22,10 +22,10 @@ const ProductCard = (props) => {
 
 
     return (
-        <div>
+        <div className='productCard'>
             <h1>{product.name}</h1>
             <h2>{`${dollars}.${cents}`}</h2>
-            <img src={`${url}${product.image}`} alt={product.description} />
+            <img src={`${url}${product.image}`} alt={product.description} className='productCardImage'/>
         </div>
     );
 
