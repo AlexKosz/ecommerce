@@ -1,8 +1,7 @@
 .productCard{
     border: 3px solid #aaa;
     border-radius: 5px;
-    min-width: 20em;
-    max-width: 40em;
+    min-width: 30em;
     padding: 1em;
     margin: 1em;
 }
@@ -16,4 +15,8 @@
 .productCardImage{
     min-width: 150px;
     max-width: 100%;
+}
+
+.productCard h2{
+    color: #555;
 }
