@@ -1,0 +1,51 @@
+.mainProductPage{
+    width: 100%;
+}
+
+.mainProductWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    padding: 2em;
+    align-items: stretch;
+    min-height: 55vh;
+    gap: 3%;
+}
+
+.mainProductWrapper img{
+    flex: 3;
+    height: 100%;
+}
+
+.productInfo{
+    flex: 2;
+    background-color: #9fff9f;
+    display: flex;
+    flex-direction: column;
+}
+
+.productActions{
+    flex: 2;
+    border: 3px solid #bbb;
+}
+
+@media (max-width: 800px){
+    .mainProductWrapper{
+        flex-direction: column;
+        min-width: 55vw;
+    }
+
+    .mainProductWrapper *{
+        margin: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
