@@ -8,7 +8,7 @@ const Navbar = (props) => {
         <div className='wrapper'>
             <h2>Logo Goes Here</h2>
             <div className='search'>
-                <img src='searchicon.png' />
+                <img src='searchicon.png' alt=""/>
                 <input type="text" />
             </div>
             <div className='right'>

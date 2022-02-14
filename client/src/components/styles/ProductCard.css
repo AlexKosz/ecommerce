@@ -1,5 +1,5 @@
 .productCard{
-    border: 3px solid #aaa;
+    border: 3px solid #bbb;
     border-radius: 5px;
     min-width: 30em;
     padding: 1em;
@@ -8,7 +8,7 @@
 
 .productCard:hover{
     cursor: pointer;
-    border: 5px solid #000;
+    border: 3px solid #000;
 
 }
 

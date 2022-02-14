@@ -10,7 +10,7 @@ const ProductCard = (props) => {
 
 
 
-    if (product.image == '/default.jpg') {
+    if (product.image === '/default.jpg') {
         product.image = null
     }
 

@@ -4,11 +4,12 @@ import ProductCard from './ProductCard';
 import './styles/Store.css';
 
 
-const baseURL = 'http://localhost:8000'
-const apiURL = `${baseURL}/api`
+
+const Store = (props) => {
+    const baseURL = props.urls.baseURL
+    const apiURL = props.urls.apiURL
 
 
-const Store = () => {
     const [products, setProducts] = useState([])
 
     const getProducts = () => {
@@ -32,7 +33,7 @@ const Store = () => {
                 {
                     products.map(
                         (product, index) =>
-                            <ProductCard product={product} url={baseURL} />
+                            <ProductCard product={product} url={baseURL} key={product.id}/>
                     )
                 }
             </div>
