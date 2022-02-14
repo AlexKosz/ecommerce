@@ -1,3 +1,7 @@
+*{
+    text-decoration:none;
+}
+
 .productCard{
     border: 3px solid #bbb;
     border-radius: 5px;
@@ -24,4 +28,8 @@
 
 .productCard h2{
     color: #555;
+}
+
+.productCard h1{
+    color: #000;
 }

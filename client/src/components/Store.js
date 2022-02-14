@@ -4,7 +4,6 @@ import ProductCard from './ProductCard';
 import './styles/Store.css';
 
 
-
 const Store = (props) => {
     const baseURL = props.urls.baseURL
     const apiURL = props.urls.apiURL
@@ -24,8 +23,6 @@ const Store = (props) => {
     }, [])
 
 
-
-
     return (
         <div className='mainStore'>
             <h1>Store Page</h1>
@@ -33,7 +30,7 @@ const Store = (props) => {
                 {
                     products.map(
                         (product, index) =>
-                            <ProductCard product={product} url={baseURL} key={product.id}/>
+                            <a href={`/product/${product.id}`} key={product.id}><ProductCard product={product} url={baseURL} /></a>
                     )
                 }
             </div>
