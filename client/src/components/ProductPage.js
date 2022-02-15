@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './styles/ProductPage.scss';
+import './styles/ProductPage.css';
 import { useParams } from '@reach/router';
 import Stars from './Stars';
+import {addToCart}  from './util/cartHelper'
 
 const ProductPage = (props) => {
     const apiURL = props.urls.apiURL
     const baseURL = props.urls.baseURL
     const { productId } = useParams()
     const [product, setProduct] = useState([])
+    const [quantity, setQuantity] = useState(1)
 
     const getProduct = () => {
         axios.get(`${apiURL}/product/${productId}`).then(res => {
@@ -33,7 +35,7 @@ const ProductPage = (props) => {
                     <Stars rating={product.average_star_rating}/>
                 </div>
                 <div className='productActions'>
-                    <button>Add to cart</button>
+                    <button onClick={()=>addToCart(product.id, quantity)}>Add to cart</button>
                 </div>
                 
             </div>
