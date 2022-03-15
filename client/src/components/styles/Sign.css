@@ -1,0 +1,17 @@
+.inactive{
+  color:#AAA
+}
+
+.active{
+  color:#000
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

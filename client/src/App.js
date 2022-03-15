@@ -5,6 +5,7 @@ import { Router } from "@reach/router";
 import Store from './components/Store';
 import ProductPage from './components/ProductPage';
 import Navbar from './components/Navbar';
+import SignIn from './components/SignIn';
 
 
 const baseURL = 'http://localhost:8000'
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Router>
         <Store path="/" urls={urls}/>
+        <SignIn path="/sign" urls={urls}/>
         <ProductPage path="/product/:productId" urls={urls}/>
         {/* <SignIn path="/signIn" /> */}
       </Router>
